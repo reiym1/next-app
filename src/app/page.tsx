@@ -8,7 +8,7 @@ export default function Home() {
         <div>
           {/*          <LOGIN />
           <MYPAGE />
-          <GOJIYONJI />
+          <STREAMER />
           <PROGAMER />
           <REVIEW />  */}
         </div>
