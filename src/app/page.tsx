@@ -6,7 +6,10 @@ export default function Home() {
       <h1>推し活をはかどらせよう!</h1>
       <div>
         <div>
-          {/*          <LOGIN />
+          <main>
+          <title>推し活をはかどらせよう!</title>
+          </main>
+          {/*<LOGIN />
           <MYPAGE />
           <STREAMER />
           <PROGAMER />
