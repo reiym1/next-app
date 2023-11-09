@@ -1,0 +1,18 @@
+.progamer {
+    position: relative;
+}
+
+&Name {
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    display: -webkit-box;
+    position: absolute;
+    bottom: 10px;
+    left: 8px;
+    vertical-align: middle;
+    overflow: hidden;
+    color: #fdfcfd;
+    font-weight: bold;
+    font-size: 16px;
+    word-break: break-all;
+}
