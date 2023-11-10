@@ -9,7 +9,9 @@ type progamerProps = {
   progamerId: string;
 };
 const Progamer = () => {
-  return <div>Progamer</div>;
+  return <div className={styles.progamer}>
+    Progamer
+    </div>;
 
 };
 

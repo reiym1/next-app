@@ -1,14 +1,16 @@
 import Image from "next/image";
 
+import styles from "./styles/base-section.module.scss";
+
 export default function Home() {
   return (
     <main>
-      <h1>推し活をはかどらせよう!</h1>
+      <h1 >推し活をはかどらせよう!</h1>
       <div>
         <div>
           <h1>LOGIN</h1>
         </div>
-        <div>
+        <div className={styles.layout}>
           <main>
           <title>推し活をはかどらせよう!</title>
           </main>
