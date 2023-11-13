@@ -1,5 +1,17 @@
-import Image from "next/image";
+'use client'
+import Image from 'next/image'
+import Progamer from './components/progamer/Progamer'
+import { QueryClient, QueryClientProvider } from 'react-query'
 
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      retry: false,
+      refetchOnWindowFocus: false,
+      suspense: true,
+    },
+  },
+})
 export default function Home() {
   return (
     <main>
@@ -10,11 +22,11 @@ export default function Home() {
         </div>
         <div>
           <main>
-          <title>推し活をはかどらせよう!</title>
+            <title>推し活をはかどらせよう!</title>
           </main>
           <div>
-          <h2>PROGAMER</h2>
-          <h3>STREAMER</h3>
+            <Progamer />
+            <h3>STREAMER</h3>
           </div>
           <h4>PARTSLIST</h4>
           <ul>
@@ -38,5 +50,5 @@ export default function Home() {
         </div>
       </div>
     </main>
-  );
+  )
 }

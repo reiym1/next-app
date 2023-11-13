@@ -1,5 +1,5 @@
-import Image from "next/image";
-
+import Image from 'next/image'
+// import
 export default function Home() {
   return (
     <main>
@@ -10,11 +10,11 @@ export default function Home() {
         </div>
         <div>
           <main>
-          <title>推し活をはかどらせよう!</title>
+            <title>推し活をはかどらせよう!</title>
           </main>
           <div>
-          <h2>PROGAMER</h2>
-          <h3>STREAMER</h3>
+            <h2>PROGAMER</h2>
+            <h3>STREAMER</h3>
           </div>
           <h4>PARTSLIST</h4>
           <ul>
@@ -35,5 +35,5 @@ export default function Home() {
         </div>
       </div>
     </main>
-  );
+  )
 }
