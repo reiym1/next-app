@@ -1,5 +1,7 @@
 import Image from 'next/image'
-// import
+
+import styles from './styles/base-section.module.scss'
+
 export default function Home() {
   return (
     <main>
@@ -8,7 +10,7 @@ export default function Home() {
         <div>
           <h1>LOGIN</h1>
         </div>
-        <div>
+        <div className={styles.layout}>
           <main>
             <title>推し活をはかどらせよう!</title>
           </main>
