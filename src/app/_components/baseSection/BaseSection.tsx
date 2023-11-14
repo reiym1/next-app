@@ -8,7 +8,7 @@ export default function Home() {
     <main>
       <h1 className={styles.maintitle}>推し活をはかどらせよう!</h1>
       <div>
-        <div className="m-10" text-center>
+        <div className="m-10">
           <h1>LOGIN</h1>
           <NotesList />
         </div>
@@ -38,6 +38,7 @@ export default function Home() {
           <REVIEW />  */}
         </div>
       </div>
+      <button></button>
     </main>
   )
 }

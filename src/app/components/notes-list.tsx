@@ -3,21 +3,21 @@ import type { Database } from '../../../database.types'
 import { format } from 'date-fns'
 // import type { NextApiRequest, NextApiResponse } from 'next'
 
-
 type Note = Database['public']['Tables']['notes']['Row']
 
 async function fetchNotes() {
-    await new Promise((resolve) => setTimeout(resolve, 2000))
-    const res = await fetch(`${process.env.url}/rest/v1/notes?select=*`,{
-        headers: new Headers({
-            apikey: process.env.apikey as string,
-        }),
-    })
-    if (!res.ok) {
-        throw new Error("Failed to fetch data in server")
-    }
-    const notes: Note[] = await res.json()
-    return notes
+  console.log(process.env)
+  await new Promise((resolve) => setTimeout(resolve, 2000))
+  const res = await fetch(`${process.env.url}/rest/v1/notes?select=*`, {
+    headers: new Headers({
+      apikey: process.env.apikey as string,
+    }),
+  })
+  if (!res.ok) {
+    throw new Error('Failed to fetch data in server')
+  }
+  const notes: Note[] = await res.json()
+  return notes
 }
 export default async function NotesList() {
   const notes = await fetchNotes()
