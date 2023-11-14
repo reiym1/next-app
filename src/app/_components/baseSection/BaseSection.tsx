@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Progamer from '@/app/components/progamer/Progamer'
-import styles from 'basesection.module.scss'
+import styles from './styles/basesection.module.scss'
 import NotesList from '@/app/components/notes-list'
 
 export default function Home() {
