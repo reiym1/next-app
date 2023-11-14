@@ -1,14 +1,14 @@
 import { resolve } from 'path'
 import type { Database } from '../../../database.types'
 import { format } from 'date-fns'
-import type { NextApiRequest, NextApiResponse } from 'next'
+// import type { NextApiRequest, NextApiResponse } from 'next'
 
 
 type Note = Database['public']['Tables']['notes']['Row']
 
 async function fetchNotes() {
     await new Promise((resolve) => setTimeout(resolve, 2000))
-    const res = await fetch(`${process.env .url}/rest/v1/notes?select=*`,{
+    const res = await fetch(`${process.env.url}/rest/v1/notes?select=*`,{
         headers: new Headers({
             apikey: process.env.apikey as string,
         }),
