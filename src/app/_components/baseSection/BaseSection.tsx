@@ -1,21 +1,23 @@
 import Image from 'next/image'
-import Progamer from '@/app/components/login/progamer/Progamer'
-import styles from './styles/basesection.module.scss'
+import Progamer from '@/app/components/progamer/Progamer'
+import styles from 'basesection.module.scss'
+import NotesList from '@/app/components/notes-list'
 
 export default function Home() {
   return (
     <main>
       <h1 className={styles.maintitle}>推し活をはかどらせよう!</h1>
       <div>
-        <div>
+        <div className="m-10" text-center>
           <h1>LOGIN</h1>
+          <NotesList />
         </div>
         <div className={styles.layout}>
           <main>
             <title>推し活をはかどらせよう!</title>
           </main>
           <div>
-            <Progamer/>
+            <Progamer />
             <h3>STREAMER</h3>
           </div>
           <h4>PARTSLIST</h4>
