@@ -1,8 +1,10 @@
-import { resolve } from "path";
-import type { Database } from "../../../database.types";
-import { format } from "date-fns"
+import { resolve } from 'path'
+import type { Database } from '../../../database.types'
+import { format } from 'date-fns'
+import type { NextApiRequest, NextApiResponse } from 'next'
 
-type Note = Database["public"]["Tables"]["notes"]["Row"]
+
+type Note = Database['public']['Tables']['notes']['Row']
 
 async function fetchNotes() {
     await new Promise((resolve) => setTimeout(resolve, 2000))
@@ -17,13 +19,22 @@ async function fetchNotes() {
     const notes: Note[] = await res.json()
     return notes
 }
-
 export default async function NotesList() {
-    const notes = await fetchNotes()
-    return <div>
-        {' '}
-        <p className="my-4 pb-3 text-xl font-medium underline-offset-4">
-            Notes
-        </p>
+  const notes = await fetchNotes()
+  return (
+    <div>
+      <p className="my-4 pb-3 text-xl font-medium underline-offset-4">Notes</p>
+      <ul className="m-3">
+        {notes.map((note) => (
+          <li key={note.id}>
+            <p> {note.title}</p>
+            <p>
+              <strong className="mr-3">Created at:</strong>
+              {note && format(new Date(note.created_at), 'yyyy-MM-dd HH:mm:ss')}
+            </p>
+          </li>
+        ))}
+      </ul>
     </div>
+  )
 }

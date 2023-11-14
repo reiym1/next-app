@@ -1,5 +1,6 @@
 import React, { FC } from 'react'
 import Link from 'next/link'
+// import imag
 
 import styles from './styles/progamer.module.scss'
 
